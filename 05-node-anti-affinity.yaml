@@ -12,7 +12,6 @@ spec:
             operator: NotIn
             values:
             - gpu
-  conatiners: 
+  containers: 
   - name: cont-1 
     image: nginx 
-     
