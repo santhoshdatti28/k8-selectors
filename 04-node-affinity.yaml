@@ -10,7 +10,7 @@ spec:
         - matchExpressions:
           - key: hardware
             operator: In
-            value:
+            values:
             - gpu
   containers:
   - name: cont-1 
