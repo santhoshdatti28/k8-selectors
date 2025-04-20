@@ -8,5 +8,10 @@ spec:
   containers:
   - name: cont-2 
     image: nginx
+  tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "gpu"
+    effect: "NoSchedule"
 
 
