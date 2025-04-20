@@ -5,6 +5,6 @@ metadata:
 spec:
   nodeSelector: 
     topology.kubernetes.io/zone=us-east-1d
-  container:
+  containers:
   - name: cont-1
     image: nginx
