@@ -1,0 +1,29 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: pod-3 
+  labels:
+    app-name: nginx 
+spec: 
+  containers:
+  - name: cont-1 
+    image: nginx 
+---
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: pod-4 
+spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app-name
+            operator: In
+            values:
+            - nginx
+        topologyKey: "kubernetes.io/hostname"
+  containers:
+  - name: cont-2
+    image: nginx
